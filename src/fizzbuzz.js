@@ -16,6 +16,13 @@ function fizzBuzz(lower, upper) {
   return arr
 }
 
-console.log(fizzBuzz(1, 15))
+function fizzBuzzSimple(lower, upper) {
+  arr1 = []
+  for (let i = lower - 1; i < upper; ) {
+    arr1.push((++i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'Buzz') || i)
+  }
+  return arr1
+}
+console.log(fizzBuzzSimple(1, 15))
 // TODO: Change undefined below to the name of your function
-module.exports = fizzBuzz
+module.exports = fizzBuzzSimple
